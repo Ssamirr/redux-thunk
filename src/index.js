@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import "./assets/reset.css"
-import "./assets/main.css"
+import "./assets/style/reset.css"
+import "./assets/style/main.css"
 import { Provider } from 'react-redux';
 import store from './redux/store';
 

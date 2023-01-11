@@ -1,4 +1,4 @@
-import { DELETE, START } from "./customers.actions"
+// import { START } from "./customers.actions"
 
 
 export const start = () => {
@@ -10,10 +10,3 @@ export const start = () => {
             })
     }
 }
-
-// export const deleteItem = (payload) => {
-//     return {
-//       type: DELETE,
-//       payload
-//     };
-//   };
