@@ -59,7 +59,7 @@ function Customers() {
                                         </td>
                                         <td>
                                             <div className='large-font text-center top-20'>
-                                                <ion-icon onClick={()=>dispatch(add(item))} style={{fill:favorites.includes(item) && "red"}} name="heart">
+                                                <ion-icon onClick={() => dispatch(add(item))} style={{ fill: favorites.filter(q => q.id === item.id).length !== 0 && "red" }} name="heart">
                                                     <div className='red-bg'></div>
                                                 </ion-icon>
                                             </div>
