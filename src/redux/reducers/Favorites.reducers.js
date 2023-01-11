@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { ADD, DELETE_ALL } from "../actions/favorites.actions";
+import { ADD, DELETE_ALL, DELETE_FROM_FAVORITES } from "../actions/favorites.actions";
 
 
 const favoritesReducer = (state = [], action) => {
@@ -15,8 +15,10 @@ const favoritesReducer = (state = [], action) => {
             } else {
                 toast.error("item is deleted from favorites list", { autoClose: 2000 });
                 return [...state.filter(q => q.id !== action.payload.id)];
-                
+
             }
+        case DELETE_FROM_FAVORITES:
+            return [...state.filter(q => q.id !== action.payload)];
         case DELETE_ALL:
             return [];
         default:

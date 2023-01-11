@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { start } from '../redux/actions/customersActionsCreator';
-import { add } from '../redux/actions/favoritesActionsCreator';
+import { add, deleteItem } from '../redux/actions/favoritesActionsCreator';
 
 
 function Customers() {
@@ -25,6 +25,7 @@ function Customers() {
         })
             .then(() => {
                 toast.error("Item is deleted", { autoClose: 2000 })
+                dispatch(deleteItem(id))
                 dispatch(start())
             })
     }
